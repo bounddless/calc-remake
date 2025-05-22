@@ -1,0 +1,168 @@
+header {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: inherit;
+    width: 900px;
+    height: 80px;
+
+    & .wrapper {
+        border: 1px solid $light-border;
+        border-radius: 30px;
+    }
+}
+
+.wrapper {
+
+    width: 800px;
+    height: inherit;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+// button burger-menu
+
+.burger-menu {
+
+    width: 30px;
+    height: 18px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .lines-menu {
+        background-color: $light-border;
+        width: 30px;
+        height: 2px;
+        transition: width 0.3s ease-in-out;
+    }
+
+    .short {
+        width: 20px;
+        transition: width 0.3s ease-in-out;
+    }
+
+    &:hover {
+        .lines-menu {
+            width: 20px;
+        }
+
+        .short {
+            width: 30px;
+        }
+    }
+}
+
+// burger-menu -> history-list
+
+
+.history-list {
+    display: none;
+    width: 700px;
+    height: 782px;
+    top: 86px;
+    left: -50px;
+    position: absolute;
+    background-color: $light-bgc;
+    border: 1px solid $light-border;
+    border-radius: 30px;
+    margin-top: 5px;
+
+    button {
+        width: 160px;
+        height: 50px;
+        font-size: 16px;
+        background-color: transparent;
+        border-radius: 30px;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+
+        &:hover {
+            background-color: $light-hover;
+        }
+
+    }
+
+    ul {
+        position: absolute;
+        width: 500px;
+        height: 600px;
+        left: 90px;
+        top: 120px;
+        // overflow-y:auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: auto;
+        background-color: $light-bgc;
+        border: 1px solid $light-border;
+        border-radius: 20px;
+
+
+        li {
+            font: {
+                size: 35px;
+                family: 'Roboto';
+                weight: bold;
+            }
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 440px;
+            height: 90px;
+            border: 1px solid $light-border;
+            border-radius: 10px;
+            margin: 10px 0 10px 0;
+        }
+    }
+
+}
+
+// button Theme-toogle
+
+.themeToogle {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50px;
+    height: 40px;
+    border: 1px solid $light-border;
+    border-radius: 20px;
+
+    &:hover {
+            background-color: $light-hover;
+        }
+
+    .themeChoice {
+        display: block;
+        cursor: pointer;
+        width: 35px;
+        height: 35px;
+        border: none;
+        border-radius: 100%;
+        background-size: 80% 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url(/img/sun.png);
+        // onclick="checkbox()"
+
+    }
+
+    .themeInput {
+        display: none;
+    }
+
+    .themeInput:checked~.themeChoice {
+        background-image: url(/img/moon.png) !important;
+    }
+
+}

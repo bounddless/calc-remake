@@ -1,4 +1,151 @@
-@import url(css/fonts.scss);
+@font-face {
+  font-family: "Montserrat";
+  src: url(/fonts/Montserrat-Black.ttf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(/fonts/Montserrat-Light.ttf);
+  font-weight: lighter;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(/fonts/Montserrat-Bold.ttf);
+  font-weight: bold;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: inherit;
+  width: 900px;
+  height: 80px;
+}
+header .wrapper {
+  border: 1px solid #252525;
+  border-radius: 30px;
+}
+
+.wrapper {
+  width: 800px;
+  height: inherit;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.burger-menu {
+  width: 30px;
+  height: 18px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.burger-menu .lines-menu {
+  background-color: #252525;
+  width: 30px;
+  height: 2px;
+  transition: width 0.3s ease-in-out;
+}
+.burger-menu .short {
+  width: 20px;
+  transition: width 0.3s ease-in-out;
+}
+.burger-menu:hover .lines-menu {
+  width: 20px;
+}
+.burger-menu:hover .short {
+  width: 30px;
+}
+
+.history-list {
+  display: none;
+  width: 700px;
+  height: 782px;
+  top: 86px;
+  left: -50px;
+  position: absolute;
+  background-color: #f0f0f0;
+  border: 1px solid #252525;
+  border-radius: 30px;
+  margin-top: 5px;
+}
+.history-list button {
+  width: 160px;
+  height: 50px;
+  font-size: 16px;
+  background-color: transparent;
+  border-radius: 30px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+.history-list button:hover {
+  background-color: #d6d6d6;
+}
+.history-list ul {
+  position: absolute;
+  width: 500px;
+  height: 600px;
+  left: 90px;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  background-color: #f0f0f0;
+  border: 1px solid #252525;
+  border-radius: 20px;
+}
+.history-list ul li {
+  font-size: 35px;
+  font-family: "Roboto";
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 440px;
+  height: 90px;
+  border: 1px solid #252525;
+  border-radius: 10px;
+  margin: 10px 0 10px 0;
+}
+
+.themeToogle {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 50px;
+  height: 40px;
+  border: 1px solid #252525;
+  border-radius: 20px;
+}
+.themeToogle:hover {
+  background-color: #d6d6d6;
+}
+.themeToogle .themeChoice {
+  display: block;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 100%;
+  background-size: 80% 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(/img/sun.png);
+}
+.themeToogle .themeInput {
+  display: none;
+}
+.themeToogle .themeInput:checked ~ .themeChoice {
+  background-image: url(/img/moon.png) !important;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,6 +157,7 @@
 body {
   display: flex;
   justify-content: center;
+  background-color: #fdfdfd;
 }
 
 h3 {
@@ -20,6 +168,10 @@ a {
   color: #252525;
   text-decoration: none;
 }
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
 
 section:first-child {
   margin-top: 25px;
@@ -27,6 +179,8 @@ section:first-child {
 
 section {
   margin-top: 50px;
+  display: flex;
+  justify-content: center;
 }
 
 .all-container {

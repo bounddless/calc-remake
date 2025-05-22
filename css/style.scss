@@ -1,4 +1,4 @@
-@import url(css/fonts.scss);
+@import 'fonts.scss', 'colors.scss' ,'header.scss';
 
 // 
 
@@ -13,19 +13,10 @@
 body {
     display: flex;
     justify-content: center;
+    background-color: $light-main;
 }
 
-//  root
-
-$light-bgc: #ececec;
-$light-text: #252525;
-$light-border: #252525;
-
-$dark-bgc: #292929;
-$dark-text: #bdbdbd;
-$dark-border: #929292;
-
-// settings tags
+// 
 
 h3 {
     font-weight: lighter;
@@ -34,6 +25,10 @@ h3 {
 a {
     color:$light-text;
     text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+        text-underline-offset: 8px;
+    }
 }
 
 section:first-child {
@@ -42,6 +37,8 @@ section:first-child {
 
 section {
     margin-top: 50px;
+    display: flex;
+    justify-content: center;
 }
 
 // settings classes
