@@ -1,0 +1,52 @@
+@import url(css/fonts.scss);
+
+// 
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+//  root
+
+$light-bgc: #ececec;
+$light-text: #252525;
+$light-border: #252525;
+
+$dark-bgc: #292929;
+$dark-text: #bdbdbd;
+$dark-border: #929292;
+
+// settings tags
+
+h3 {
+    font-weight: lighter;
+}
+
+a {
+    color:$light-text;
+    text-decoration: none;
+}
+
+section:first-child {
+    margin-top: 25px;
+}
+
+section {
+    margin-top: 50px;
+}
+
+// settings classes
+
+.all-container {
+    width: 1865px;
+}
+

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="all-container">
+        <section>
+            <header>
+                <div class="wrapper">
+                    <button id="burger-menu" type="button">
+                        <div class="lines-menu"></div>
+                        <div class="lines-menu short"></div>
+                        <div class="lines-menu"></div>
+                    </button>
+
+                    <div id="history-list">
+                        <button class="delete" id="clearList">Очистить список</button>
+                        <ul id="list"></ul>
+                    </div>
+
+                    <div class="title">
+                        <a href="#">
+                            <h3>Calculator</h3>
+                        </a>
+                    </div>
+
+                    <div class="themeToogle">
+                        <input type="checkbox" name="toogleTheme1" id="toogleTheme1" class="themeInput" checked />
+                        <label for="toogleTheme1" class="ThemeChoise" onclick="checkbox()"></label>
+                    </div>
+                </div>
+            </header>
+        </section>
+
+        <section>
+            <div class="section-container">
+                <div class="wrapper">
+                    <div class="calc-dispaly">
+                        <input id="display" value="0" type="text" class="window" placeholder="0" />
+                    </div>
+
+                    <div class="calc-buttons-container">
+                        <div class="calc-btns">
+                                <button class="grey clear" data-value="AC">
+                                    <h2>AC</h2>
+                                </button>
+                                <button class="grey sign" data-value="+/-">
+                                    <h2>+/-</h2>
+                                </button>
+                                <button class="grey percent" data-value="%">
+                                    <h2>%</h2>
+                                </button>
+
+                                <button class="numbers" data-value="9">
+                                    <h2>9</h2>
+                                </button>
+                                <button class="numbers" data-value="8">
+                                    <h2>8</h2>
+                                </button>
+                                <button class="numbers" data-value="7">
+                                    <h2>7</h2>
+                                </button>
+                                <button class="numbers" data-value="6">
+                                    <h2>6</h2>
+                                </button>
+                                <button class="numbers" data-value="5">
+                                    <h2>5</h2>
+                                </button>
+                                <button class="numbers" data-value="4">
+                                    <h2>4</h2>
+                                </button>
+                                <button class="numbers" data-value="3">
+                                    <h2>3</h2>
+                                </button>
+                                <button class="numbers" data-value="2">
+                                    <h2>2</h2>
+                                </button>
+                                <button class="numbers" data-value="1">
+                                    <h2>1</h2>
+                                </button>
+                                <button class="zero numbers" data-value="0">
+                                    <h2>0</h2>
+                                </button>
+                                <button class="numbers comma" data-value=",">
+                                    <h2>,</h2>
+                                </button>
+                            </div>
+                            <div class="cacl-op">
+                                <button class="operations divide" data-value="/">
+                                    <h2>/</h2>
+                                </button>
+                                <button class="operations multiply" data-value="*">
+                                    <h2>X</h2>
+                                </button>
+                                <button class="operations subtract" data-value="-">
+                                    <h2>-</h2>
+                                </button>
+                                <button class="operations add" data-value="+">
+                                    <h2>+</h2>
+                                </button>
+                                <button class="operations equals" id="equal" data-value="=">
+                                    <h2>=</h2>
+                                </button>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
