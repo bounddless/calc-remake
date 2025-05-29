@@ -1,6 +1,7 @@
 import { display, appendToDisplay, clearDisplay, toggle } from './display.mjs';
 import { history } from './history.mjs';
 
+
 document.querySelectorAll('.calc-buttons-container button').forEach(button => {
     button.addEventListener('click', () => {
         switch (button.dataset.value) {

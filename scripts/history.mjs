@@ -22,4 +22,3 @@ document.getElementById('burger-menu').onclick = function() {
 };
 
 export { history };
-
