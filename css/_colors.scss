@@ -8,6 +8,20 @@ $light-main: #fdfdfd;
 
 // dark-theme
 
-$dark-bgc: #292929;
-$dark-text: #bdbdbd;
+$dark-bgc: #0f0f0f;
+$dark-text: #cacaca;
 $dark-border: #929292;
+
+// for js 
+
+:root {
+  --light-bgc: #f0f0f0;
+  --light-text: #252525;
+  --light-border: #252525;
+  --light-hover: #d6d6d6;
+  --light-main: #fdfdfd;
+
+  --dark-bgc: #0f0f0f;
+  --dark-text: #cacaca;
+  --dark-border: #929292;
+}

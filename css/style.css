@@ -13,6 +13,17 @@
   src: url(/fonts/Montserrat-Bold.ttf);
   font-weight: bold;
 }
+:root {
+  --light-bgc: #f0f0f0;
+  --light-text: #252525;
+  --light-border: #252525;
+  --light-hover: #d6d6d6;
+  --light-main: #fdfdfd;
+  --dark-bgc: #0f0f0f;
+  --dark-text: #cacaca;
+  --dark-border: #929292;
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -38,7 +49,7 @@ header .wrapper {
 .burger-menu {
   width: 30px;
   height: 18px;
-  background-color: transparent;
+  background-color: transparent !important;
   border: none;
   cursor: pointer;
   display: flex;
@@ -62,6 +73,37 @@ header .wrapper {
   width: 30px;
 }
 
+.themeToogle {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 50px;
+  height: 40px;
+  border: 1px solid #252525;
+  border-radius: 20px;
+}
+.themeToogle:hover {
+  background-color: #d6d6d6;
+}
+.themeToogle .themeChoice {
+  display: block;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 100%;
+  background-size: 80% 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(/img/sun.png);
+}
+.themeToogle .themeInput {
+  display: none;
+}
+.themeToogle .themeInput:checked ~ .themeChoice {
+  background-image: url(/img/moon.png) !important;
+}
+
 .history-list {
   display: none;
   width: 700px;
@@ -73,6 +115,7 @@ header .wrapper {
   border: 1px solid #252525;
   border-radius: 30px;
   margin-top: 5px;
+  z-index: 99;
 }
 .history-list button {
   width: 160px;
@@ -115,35 +158,71 @@ header .wrapper {
   margin: 10px 0 10px 0;
 }
 
-.themeToogle {
+.section-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: inherit;
+  width: 900px;
+  height: 750px;
+}
+.section-container .wrapper {
+  border: 1px solid #252525;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+input {
+  border: inherit;
+  border-radius: inherit;
+  padding-left: 30px;
+  width: 600px;
+  height: 100px;
+  font-size: 40px;
+}
+
+.calc-buttons-container {
+  width: 600px;
+  height: 550px;
+  display: flex;
+  justify-content: space-between;
+}
+.calc-buttons-container button {
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  font-size: 20px;
+  border: 1px solid #252525;
+}
+.calc-buttons-container button:hover {
+  background-color: #d6d6d6;
+  transition: 0.3s;
+}
+.calc-buttons-container .calc-btns {
+  height: inherit;
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(5, 100px);
+  grid-column-gap: 30px;
+  grid-row-gap: 10px;
+}
+.calc-buttons-container .calc-btns .zero {
+  grid-area: 5/1/5/3;
+}
+.calc-buttons-container .cacl-op {
+  height: 540px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.calc-buttons-container .cacl-op button {
+  width: 200px;
+  height: 100px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  width: 50px;
-  height: 40px;
-  border: 1px solid #252525;
-  border-radius: 20px;
-}
-.themeToogle:hover {
-  background-color: #d6d6d6;
-}
-.themeToogle .themeChoice {
-  display: block;
-  cursor: pointer;
-  width: 35px;
-  height: 35px;
-  border: none;
-  border-radius: 100%;
-  background-size: 80% 80%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url(/img/sun.png);
-}
-.themeToogle .themeInput {
-  display: none;
-}
-.themeToogle .themeInput:checked ~ .themeChoice {
-  background-image: url(/img/moon.png) !important;
+  justify-content: center;
 }
 
 * {
