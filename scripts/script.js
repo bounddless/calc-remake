@@ -5,4 +5,3 @@ import './op.mjs';
 import { checkbox } from './utils.mjs';
 
 document.getElementById('toogleTheme').addEventListener('click', checkbox)
-// document.getElementById('toogleTheme').addEventListener('change', checkbox);

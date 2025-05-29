@@ -1,5 +1,6 @@
 import { maxNum } from './math.mjs';
 
+
 const display = document.querySelector('#display');
 document.getElementById('display').disabled = true;
 

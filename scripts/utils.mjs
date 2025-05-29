@@ -1,7 +1,6 @@
 const styleColors = window.getComputedStyle(document.body);
 const btn = document.querySelectorAll('.lines-menu')
 
-
 function checkbox() {
 
     const checkbox = document.getElementById('toogleTheme');

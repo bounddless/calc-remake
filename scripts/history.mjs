@@ -1,4 +1,3 @@
-// Должно соответствовать HTML:
 const historyList = document.getElementById('list'); // верно
 document.getElementById('clearList'); // верно
 document.getElementById('history-list'); // верно

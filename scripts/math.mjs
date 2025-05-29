@@ -1,5 +1,6 @@
 import { display } from './display.mjs';
 
+
 function maxNum(value) {
     let parts = display.value.split(/([+\-*/])/);
 
