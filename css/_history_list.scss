@@ -1,9 +1,9 @@
 .history-list {
     display: none;
     width: 700px;
-    height: 782px;
-    top: 86px;
-    left: -50px;
+    height: 700px;
+    top: 150px;
+    left: 100px;
     position: absolute;
     background-color: $light-bgc;
     border: 1px solid $light-border;
@@ -29,9 +29,9 @@
 
     ul {
         position: absolute;
-        width: 500px;
-        height: 600px;
-        left: 90px;
+        width: 600px;
+        height: 500px;
+        left: 50px;
         top: 120px;
         // overflow-y:auto;
         display: flex;
