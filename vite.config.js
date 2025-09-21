@@ -16,3 +16,6 @@ export default defineConfig({
         port: 4173
     }
 })
+
+
+// npx vite - запуск кода
